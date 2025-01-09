@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import AppCard from "./AppCard"
 import axios from 'axios'
 const apiUrl = "http://localhost:3000"
 
@@ -13,16 +12,10 @@ function Home() {
         content: '',
       };
 
-      const [formData, setFormData] = useState(newPost);
+  const [formData, setFormData] = useState(newPost);
   const [articles, setArticles] = useState([]);
 
-  const getPost = () => {
-    axios.get(`${apiUrl}/posts`).then((Response) => {
-      console.log(Response.data.data);
-      setArticles(Response.data.data)
-    })
-  }
-  useEffect(() => {getPost()},[])
+  
 
   
 
@@ -99,10 +92,7 @@ function Home() {
         <button type="submit" className="btn btn-primary">Aggiungi</button>
       </form>
 
-      <div className="mt-4">
-        {Array.isArray(articles) && articles.map((article, index) => (
-          <AppCard key={index} article={article} index={index} apiUrl={apiUrl} handleDelete={handleDelete}/>))}
-      </div>
+      
     </div>
   );
 }
