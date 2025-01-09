@@ -1,6 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState, useEffect } from 'react';
-import AppCard from './components/AppCard';
+import AppCard from "./AppCard"
 import axios from 'axios'
 const apiUrl = "http://localhost:3000"
 
