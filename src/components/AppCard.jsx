@@ -1,4 +1,5 @@
 function AppCard({article, index, apiUrl, handleDelete}) {
+
     return (
         <div  className="card mb-3">
             <div className="card-body">
@@ -6,6 +7,7 @@ function AppCard({article, index, apiUrl, handleDelete}) {
                 {article.image && <img src={`${apiUrl}/${article.image}`} alt="Immagine articolo" className="card-img-top mb-3" />}
                 <p className="card-text">{article.content}</p>
                 <button className="btn btn-danger" onClick={() => handleDelete(article.id)}>Cancella</button>
+                <a href={`/ListaPost/${article.id}`}>Dettaglio del post</a>
             </div>
         </div>
     )

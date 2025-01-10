@@ -1,7 +1,8 @@
  import 'bootstrap/dist/css/bootstrap.min.css';
- import Home from "./components/Home"
- import ChiSiamo from './components/ChiSiamo';
- import ListaPost from './components/ListaPost';
+ import Home from './components/pages/Home'
+ import ChiSiamo from './components/pages/ChiSiamo';
+ import ListaPost from './components/pages/ListaPost';
+ import DetailPost from './components/pages/DetailPost';
  import AppLayout from "./components/AppLayout"
  
 
@@ -15,6 +16,7 @@ export default function App() {
             <Route path="/" element={<Home/>}/>
             <Route path="/ChiSiamo" element={<ChiSiamo/>}/>
             <Route path="/ListaPost" element={<ListaPost/>}/>
+            <Route path="/ListaPost/:id" element={<DetailPost/>}/>
         </Route>
     </Routes>
     </BrowserRouter>

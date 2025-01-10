@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import AppCard from "./AppCard";
+import AppCard from "../AppCard";
 import axios from 'axios';
 
 export default function ListaPost() {
